@@ -1,12 +1,23 @@
-function Square({ value }) {
-  return <button className="square">{value}</button>;
+import { useState } from 'react';
+
+function Square() {
+  const [value, setValue] = useState(null);
+
+  function handleClick() {
+    setValue('X');
+  }
+
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
 
-
-
-//creates a component - a piece of reusable code that represents a part of a user interface
-//defines a function called Square
-export default function Board() { //export makes this function accessible outside of this file, default tells other files using your code that it’s the main function in your file
+export default function Board() {
   return (
     <>
       <div className="board-row">
@@ -27,4 +38,3 @@ export default function Board() { //export makes this function accessible outsid
     </>
   );
 }
-
