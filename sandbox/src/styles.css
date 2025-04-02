@@ -55,7 +55,7 @@ body {
   margin: 20px;
   padding: 0;
 }
-
+/* matches the button from the Square component in the App.js file */
 .square {
   background: #fff;
   border: 1px solid #999;
